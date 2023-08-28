@@ -1,0 +1,422 @@
+/* CSS Reset */
+* {
+    margin: 0rem;
+    padding: 0rem;
+}
+
+html{
+    /* by default font size 1rem=16px but to make calculation easier i have set 1rem=10px */
+    /* font-size: 10px; */
+    font-size: 62.5%;
+}
+
+/* Navbar CSS */
+
+#navbar {
+    display: flex;
+    background: #fff;
+    transition: all 1s;
+    padding: 1.5rem 0;
+    box-shadow: 0rem 0 1.8rem #0066ff;
+    background-color: #001f4d;
+    color: white;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    flex-wrap: wrap;
+}
+
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    font-size: 3.2rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    flex-wrap: wrap;
+}
+
+#navbar #logo img {
+    margin: 0.2rem 0.5rem;
+    padding: 0.2rem 0.5rem;
+}
+
+#navbar #logo p {
+    font-size: 1.6rem;
+    margin: 1.6rem 2.0rem;
+    padding: 0.2rem 1.0rem;
+    width: 30rem;
+}
+
+#navbar a {
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: cyan;
+}
+
+a:visited {
+    color: white;
+}
+
+
+#navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 15vh;
+    color: white;
+    transition: 0.5s;
+    font-size: 1.8rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    flex-wrap: wrap;
+}
+
+#navbar .item {
+    margin: 0.2rem 0.5rem;
+    padding: 0.2rem 0.5rem;
+}
+
+#navbar ul li {
+    list-style: none;
+}
+
+@media (max-width:1330px){
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* Header CSS  */
+
+#header {
+    width: 100%;
+    min-height: 100vh;
+    height: max-content;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(https://unitus.vc/wp-content/uploads/2019/09/Indian-students-2-1-600x400.jpg) center center/cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: -1;
+    opacity: 1;
+    top: 0rem;
+    left: 0rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+#heading {
+    width: 60rem;
+    height: 10rem;
+    font-size: 3rem;
+    color: #fff;
+    font-family: "Poppins",
+        sans-serif;
+    text-shadow: 0.2rem 0.2rem #0066ff;
+}
+
+#updates {
+    font-weight: bolder;
+    color: rgb(232, 226, 34);
+    position: relative;
+    top: 7.7rem;
+    font-size: 1.5rem;
+}
+
+.animate{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+
+#event-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    animation: marquee1 15s linear infinite;
+
+
+}
+
+@keyframes marquee1 {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+
+.event {
+    width: 30rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    border-radius: 0.8rem;
+    box-shadow: 0rem 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.event h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.event p {
+    font-size: 1.4rem;
+    margin: 0.2rem;
+}
+
+
+/* Main CSS */
+
+#main {
+    width: 70%;
+    padding-left: 2rem;
+}
+
+#main p:nth-child(1) {
+    margin-top: 5.5rem;
+    font-size: 3.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #37423b;
+}
+
+#main p:nth-child(3) {
+    font-style: italic;
+    font-size: 2.5rem;
+    line-height: 4.15rem;
+    margin-bottom: 2.15rem;
+}
+
+#main h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 1.3rem 0rem 3.8rem 0rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-family: "Poppins", sans-serif;
+}
+
+#btn {
+    text-decoration: none;
+    background: #003380;
+    color: #fff;
+    border-radius: 5rem;
+    padding: 0.8rem 1rem 0.9rem 1rem;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 1.4rem;
+    display: inline-block;
+    margin-bottom: 3vh;
+}
+
+#main a:hover {
+    background-color: green;
+}
+
+
+/* Section CSS */
+
+section {
+    height: auto;
+    /* Let the content determine the section height */
+    margin-left: 1rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    text-align: center;
+    /* Center-align the content */
+    overflow: hidden;
+}
+
+#section {
+    display: flex;
+    /* Display images in a line */
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+    margin-bottom: 5rem;
+    /* Add some margin to separate from the title */
+    animation: marquee 20s linear infinite;
+}
+
+.r_events {
+    display: inline-block;
+    margin: 0 1rem;
+    /* Adjust the spacing between images */
+    padding: 0.5rem;
+    /* Increase padding for a better visual appearance */
+}
+
+.r_events img {
+    max-width: 100%;
+    /* Make the images responsive within their container */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+section h1 {
+    color: #002147;
+    font-weight: bold;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0;
+    margin-top: 5rem;
+    margin-bottom: 6.5rem;
+}
+
+.r_events img:hover {
+    transform: scale(1.5);
+}
+
+
+
+/* Footer CSS */
+
+footer {
+    background-color:black;
+    color: gray;
+    padding: 4rem 0;
+    display: flex;
+}
+
+.footer {
+    text-align: center;
+    margin-bottom: 4rem;
+    margin: auto;
+}
+
+.footer h3,
+.footer h4 {
+    color: #fff;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.footer p {
+    font-size: 1.6rem;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #f39c12;
+}
+
+.footer form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.footer input[type="email"] {
+    padding: 1rem;
+    width: 60%;
+    border: none;
+    border-radius: 0.4rem 0 0 0.4rem;
+}
+
+.footer input[type="submit"] {
+    background-color: #f39c12;
+    border: none;
+    padding: 1rem 2rem;
+    color: #fff;
+    border-radius: 0 0.4rem 0.4rem 0;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 76.8rem) {
+    .footer form {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer input[type="email"],
+    .footer input[type="submit"] {
+        width: 100%;
+        border-radius: 0.4rem;
+    }
+}
+
+@media (max-width: 50rem){
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footer-contact,
+    #footer-links{
+        margin-bottom: 6rem;
+    }
+
+}
