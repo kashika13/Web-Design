@@ -2,9 +2,10 @@
 * {
     margin: 0rem;
     padding: 0rem;
+    box-sizing: border-box;
 }
 
-html{
+html {
     /* by default font size 1rem=16px but to make calculation easier i have set 1rem=10px */
     /* font-size: 10px; */
     font-size: 62.5%;
@@ -12,103 +13,113 @@ html{
 
 /* Navbar CSS */
 
-#navbar {
+nav {
     display: flex;
-    background: #fff;
-    transition: all 1s;
-    padding: 1.5rem 0;
-    box-shadow: 0rem 0 1.8rem #0066ff;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blue;
+    padding: 1.5rem;
+    position: sticky;
+    top: 0;
+    font-family: "Poppins",
+        sans-serif;
+    font-size: 1.8rem;
+    box-shadow: 0px 0 18px #0066ff;
     background-color: #001f4d;
     color: white;
-    flex-wrap: wrap;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    flex-wrap: wrap;
+    transition: all 0.5s;
+    z-index: 100;
 }
 
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 0.9;
+    gap: 2.5rem;
+    width: 80vh;
+    height: auto;
+    margin: auto;
+}
+
+nav ul li {
+    margin: auto;
+}
+
+nav a {
+    padding: 0.5rem;
+}
 
 #logo {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.logo {
-    display: flex;
-    font-size: 3.2rem;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    font-weight: 600;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    flex-wrap: wrap;
+#logo p {
+    width: 50%;
+    font-size: 1.2rem;
 }
 
-#navbar #logo img {
-    margin: 0.2rem 0.5rem;
-    padding: 0.2rem 0.5rem;
+nav li a:hover {
+    color: aqua;
 }
 
-#navbar #logo p {
-    font-size: 1.6rem;
-    margin: 1.6rem 2.0rem;
-    padding: 0.2rem 1.0rem;
-    width: 30rem;
+nav .active {
+    border-bottom: 2px solid white;
 }
 
-#navbar a {
-    text-decoration: none;
-    background-color: transparent;
-    color: white;
+nav input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
 }
 
-#navbar li a:hover,
-#navbar li a.active {
-    color: cyan;
+nav label {
+    display: none;
+    cursor: pointer;
 }
 
-a:visited {
-    color: white;
-}
-
-
-#navbar ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    left: 15vh;
-    color: white;
-    transition: 0.5s;
-    font-size: 1.8rem;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    flex-wrap: wrap;
-}
-
-#navbar .item {
-    margin: 0.2rem 0.5rem;
-    padding: 0.2rem 0.5rem;
-}
-
-#navbar ul li {
-    list-style: none;
-}
-
-@media (max-width:1330px){
-    #navbar{
-        display: flex;
+@media screen and (max-width:1220px) {
+    nav ul {
+        position: absolute;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        top: 80px;
+        width: 100%;
+        height: calc(100vh - 80px);
+        left: -100%;
+        background-color: #333333;
+        transition: all 0.5s;
+        
     }
+
+    nav ul li {
+        margin: auto;
+        text-align: center;
+    }
+
+    nav label {
+        display: block;
+    }
+
+    nav input[type="checkbox"]:checked~ul {
+        left: 0;
+    }
+
+    nav li a:hover {
+        color: aqua;
+    }
+
 }
+
 
 /* Header CSS  */
 
@@ -130,7 +141,6 @@ a:visited {
 }
 
 
-
 #heading {
     width: 60rem;
     height: 10rem;
@@ -139,6 +149,8 @@ a:visited {
     font-family: "Poppins",
         sans-serif;
     text-shadow: 0.2rem 0.2rem #0066ff;
+    padding-left: 2rem;
+    margin-bottom: 10rem;
 }
 
 #updates {
@@ -167,9 +179,8 @@ a:visited {
     margin-top: 2rem;
     border-radius: 1rem;
     animation: marquee1 15s linear infinite;
-
-
 }
+
 
 @keyframes marquee1 {
     0% {
@@ -191,8 +202,6 @@ a:visited {
 }
 
 
-
-
 .event h3 {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
@@ -207,8 +216,9 @@ a:visited {
 /* Main CSS */
 
 #main {
-    width: 70%;
+    width: 80vw;
     padding-left: 2rem;
+    
 }
 
 #main p:nth-child(1) {
@@ -324,7 +334,7 @@ section h1 {
 /* Footer CSS */
 
 footer {
-    background-color:black;
+    background-color: black;
     color: gray;
     padding: 4rem 0;
     display: flex;
@@ -406,8 +416,8 @@ footer {
     }
 }
 
-@media (max-width: 50rem){
-    footer{
+@media (max-width: 50rem) {
+    footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -415,8 +425,12 @@ footer {
     }
 
     #footer-contact,
-    #footer-links{
+    #footer-links {
         margin-bottom: 6rem;
+    }
+
+    #section {
+        width: 100rem;
     }
 
 }
